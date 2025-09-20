@@ -25,9 +25,9 @@ async def add_user(login, password):
         query = '''INSERT INTO login_data (login, password) VALUES (?, ?)'''
         cursor.execute(query, (login, password))
         conn.commit()
-        return json.dumps({"respond"; "success"})
+        return json.dumps({"respond": "success"})
     else:
-        return json.dumps({"respond"; "user already exists"})
+        return json.dumps({"respond": "user already exists"})
 
 HOST, PORT = "0.0.0.0", 666
 clients = []
